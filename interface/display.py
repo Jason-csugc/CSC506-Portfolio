@@ -15,7 +15,7 @@ class Display():
 
         self.Root = tk.Tk()
         self.Root.title("Sorting Algorithm Analyzer")
-        self.Root.geometry("1200x800")
+        self.Root.geometry("750x800")
 
         self.Root.grid_rowconfigure(0, weight=1)
         self.Root.grid_columnconfigure(0, weight=1)
