@@ -15,15 +15,22 @@ class Display():
 
         self.Root = tk.Tk()
         self.Root.title("Sorting Algorithm Analyzer")
+        self.Root.geometry("1200x800")
+
+        self.Root.grid_rowconfigure(0, weight=1)
+        self.Root.grid_columnconfigure(0, weight=1)
 
         self.Frame = tk.Frame(self.Root)
-        self.Frame.pack(padx=10, pady=10)
+        self.Frame.grid(row=0, column=0, sticky="nsew")
+
+        self.Frame.grid_rowconfigure(0, weight=1)
+        self.Frame.grid_columnconfigure(0, weight=1)
 
         self.Button = tk.Button(self.Root, text="Run Analysis", command=self.analyze)
-        self.Button.pack(pady=10)
+        self.Button.grid(row=1, column=0, sticky="nsew")
 
-        self.Textbox = tk.Text(self.Root, height=12, width=80)
-        self.Textbox.pack(padx=10, pady=10)
+        self.Textbox = tk.Text(self.Root, padx=10, pady=10)
+        self.Textbox.grid(row=2, column=0, sticky="nsew")
 
         self.Root.protocol("WM_DELETE_WINDOW", self.on_closing)
         self.Root.mainloop()
@@ -46,7 +53,8 @@ class Display():
         ax.legend()
         canvas = FigureCanvasTkAgg(fig, master=self.Frame)
         canvas.draw()
-        canvas.get_tk_widget().pack()
+        canvas_widget = canvas.get_tk_widget()
+        canvas_widget.grid(row=0, column=0, sticky="nsew")
 
         table_data = avg_df.pivot(index='Size', columns='Algorithm', values='Time (s)').round(6)
 
@@ -56,7 +64,7 @@ class Display():
             "Heap Sort": "O(n log n)",
             "Insertion Sort": "O(n²)",
             "Merge Sort": "O(n log n)",
-            "Quick Sort": "O(n²)"
+            "Quick Sort": "O(n log n)"
         }
 
         self.Textbox.delete("1.0", tk.END)

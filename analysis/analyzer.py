@@ -17,7 +17,7 @@ def run_analysis():
     results = []
     for size in sizes:
         for name, func in algorithms.items():
-            for run in range(2):
+            for run in range(10):
                 arr = random.sample(range(size * 10), size)
                 exec_time = timer.time_function(func, arr)
                 results.append({'Algorithm': name, 'Size': size, 'Time (s)': exec_time})
