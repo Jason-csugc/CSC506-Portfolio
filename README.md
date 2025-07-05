@@ -1,5 +1,6 @@
 # CSC506-Portfolio
 ## Portfolio Project
+![image](https://github.com/user-attachments/assets/31d238aa-5694-4403-a085-6ed5191ff8ae)
 
 ### Code Environment Setup
 
@@ -31,14 +32,13 @@ This project was developed and tested on Ubuntu 24.04.2 LTS using WSL on Windows
 #### Images
 
 ##### Sorting Time Complexity Graph
-![image](https://github.com/user-attachments/assets/168c3843-d67b-499d-beb4-92431e044877)
+![image](https://github.com/user-attachments/assets/acc19f07-1913-42cb-af77-2c3053acd573)
 
 ##### Sorting Space Complexity Graph
-![image](https://github.com/user-attachments/assets/168c3843-d67b-499d-beb4-92431e044877)
+![image](https://github.com/user-attachments/assets/d14ea110-fa6b-4fbb-ae88-a159e3d57a5b)
 
 ##### Average Execution Time Table ( in seconds)
-![image](https://github.com/user-attachments/assets/168c3843-d67b-499d-beb4-92431e044877)
+![image](https://github.com/user-attachments/assets/f99cd744-31c7-4cc9-b481-9067bb07084d)
 
 ##### Average Execution Space Table (in bytes)
-
-![image](https://github.com/user-attachments/assets/168c3843-d67b-499d-beb4-92431e044877)
+![image](https://github.com/user-attachments/assets/5b889515-7562-40ac-83ef-5b0e8508b6f3)
