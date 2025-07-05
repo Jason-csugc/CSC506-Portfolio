@@ -54,8 +54,8 @@ class Display():
         ax.legend()
         canvas = FigureCanvasTkAgg(time_fig, master=self.Frame)
         canvas.draw()
-        canvas_widget = canvas.get_tk_widget()
-        canvas_widget.grid(row=0, column=0, sticky="nsew")
+        canvas_widget_time = canvas.get_tk_widget()
+        canvas_widget_time.grid(row=0, column=0, sticky="nsew")
 
         time_table_data = avg_time_df.pivot(index='Size', columns='Algorithm', values='Time (s)').round(6)
 
@@ -70,8 +70,8 @@ class Display():
         s_ax.legend()
         canvas = FigureCanvasTkAgg(space_fig, master=self.Frame)
         canvas.draw()
-        canvas_widget = canvas.get_tk_widget()
-        canvas_widget.grid(row=1, column=0, sticky="nsew")
+        canvas_widget_space = canvas.get_tk_widget()
+        canvas_widget_space.grid(row=1, column=0, sticky="nsew")
 
         space_table_data = avg_space_df.pivot(index='Size', columns='Algorithm', values='Space (bytes)').round(6)
 
