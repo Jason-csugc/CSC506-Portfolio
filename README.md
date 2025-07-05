@@ -4,7 +4,7 @@
 
 ### Code Environment Setup
 
-#### Pre-requsite 
+#### Pre-requisite 
 
 This project was developed and tested on Ubuntu 24.04.2 LTS using WSL on Windows 11
 
@@ -13,7 +13,7 @@ This project was developed and tested on Ubuntu 24.04.2 LTS using WSL on Windows
 1. Install python3 version 3.11 or later
 2. Install python3 venv virtual environment package
 3. Clone the repository (https://github.com/Jason-csugc/CSC506-Portfolio.git)
-4. Create a virtual environment called 'portfolio' in the root directory of the reporitory(python3 -m vevn portfolio)
+4. Create a virtual environment called 'portfolio' in the root directory of the repository(python3 -m venv portfolio)
 5. Activate the virtual environment (source portfolio/bin/activate)
 6. Restore the requirements via pip (pip install -r requirements.txt)
 7. Install Tkinter (sudo apt update && sudo apt install python3-tk -y)

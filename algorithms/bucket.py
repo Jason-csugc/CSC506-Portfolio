@@ -1,18 +1,7 @@
+# bucket.py
+
 from algorithms import insertion
 
-# def bucket_sort(arr):
-#     n = len(arr)
-#     buckets = [[] for _ in range(n)]
-#     for num in arr:
-#         bi = int(n * num)
-#         buckets[bi].append(num)
-#     for bucket in buckets:
-#         insertion.insertion_sort(bucket)        
-#     index = 0
-#     for bucket in buckets:
-#         for num in bucket:
-#             arr[index] = num
-#             index += 1
 
 def bucket_sort(arr):
     # 1. Create empty buckets

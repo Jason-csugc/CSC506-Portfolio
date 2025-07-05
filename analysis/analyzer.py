@@ -1,3 +1,5 @@
+# amalyzer.py
+
 from algorithms import bubble, bucket, heap, insertion, merge, quick
 import random
 from analysis import timer, space
@@ -18,7 +20,7 @@ def run_analysis():
     space_results = []
     for size in sizes:
         for name, func in algorithms.items():
-            for run in range(5):
+            for _ in range(5):
                 arr = random.sample(range(size * 10), size)
                 exec_time = timer.time_function(func, arr.copy())
                 space_used = space.space_function(func, arr.copy())

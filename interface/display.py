@@ -1,3 +1,5 @@
+# display.py
+
 import sys
 import tkinter as tk
 import matplotlib.pyplot as plt
@@ -35,12 +37,11 @@ class Display():
 
         self.Root.protocol("WM_DELETE_WINDOW", self.on_closing)
         self.Root.mainloop()
-             
 
     def on_closing(self):
-                print("Window is closing")
-                self.Root.destroy()
-                sys.exit()
+        print("Window is closing")
+        self.Root.destroy()
+        sys.exit()
 
     def Display_results(self): 
         time_fig, ax = plt.subplots(figsize=(6, 4))
@@ -75,7 +76,6 @@ class Display():
 
         space_table_data = avg_space_df.pivot(index='Size', columns='Algorithm', values='Space (bytes)').round(6)
 
-        #TODO: Combine these tables into a dataframe and display as a single table
         time_complexities = {
             "Bubble Sort": "O(n²)",
             "Bucket Sort": "O(n log n)",
@@ -107,8 +107,6 @@ class Display():
         for alg, comp in space_complexities.items():
             self.Textbox.insert(tk.END, f"{alg}: {comp}\n")
 
-        
-    
     def analyze(self):
-         self._df_time, self._df_space = analyzer.run_analysis()
-         self.Display_results()
+        self._df_time, self._df_space = analyzer.run_analysis()
+        self.Display_results()

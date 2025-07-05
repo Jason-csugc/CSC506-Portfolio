@@ -1,3 +1,5 @@
+# timer.py
+
 import time
 
 def time_function(func, arr):
